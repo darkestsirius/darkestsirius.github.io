@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Sirius的空间</title>
     <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2021-12-12T17:41:34&#43;08:00</updated>
+    <updated>2021-12-12T17:50:35&#43;08:00</updated>
     <id>https://darkestsirius.github.io/</id>
     <link rel="alternate" type="text/html" href="https://darkestsirius.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://darkestsirius.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">通过Hugo搭建个人博客</title>
             <link rel="alternate" type="text/html" href="https://darkestsirius.github.io/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
             <id>https://darkestsirius.github.io/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
-            <updated>2021-12-12T17:41:25&#43;08:00</updated>
+            <updated>2021-12-12T17:50:17&#43;08:00</updated>
             <published>2021-12-11T23:30:33&#43;08:00</published>
             <author>
                     <name>reuixiy</name>
@@ -272,13 +272,48 @@ git push -u origin main &lt;span class=&#34;c1&#34;&gt;# 把本地博客推送�
 &lt;/ul&gt;
 &lt;h4 id=&#34;域名解析&#34;&gt;域名解析&lt;/h4&gt;
 &lt;p&gt;添加4个A类型和一个CNAME类型&lt;/p&gt;
-&lt;p&gt;｜ hostname ｜ type    ｜ address                    ｜ TTL  ｜
-｜ -------- ｜ ----    ｜ ---                        ｜ ---  ｜
-｜          ｜ A       ｜ 185.199.108.153            ｜ 3600 ｜
-｜          ｜ A       ｜ 185.199.109.153            ｜ 3600 ｜
-｜          ｜ A       ｜ 185.199.110.153            ｜ 3600 ｜
-｜          ｜ A       ｜ 185.199.111.153            ｜ 3600 ｜
-｜ www      ｜  CNAME  ｜ &amp;lt;你的GitHub用户名&amp;gt;.github.io ｜ 3600 ｜&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;host&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;address&lt;/th&gt;
+&lt;th&gt;TTL&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;185.199.108.153&lt;/td&gt;
+&lt;td&gt;3600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;185.199.109.153&lt;/td&gt;
+&lt;td&gt;3600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;185.199.110.153&lt;/td&gt;
+&lt;td&gt;3600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;185.199.111.153&lt;/td&gt;
+&lt;td&gt;3600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;www&lt;/td&gt;
+&lt;td&gt;CNAME&lt;/td&gt;
+&lt;td&gt;&amp;lt;你的GitHub用户名&amp;gt;.github.io&lt;/td&gt;
+&lt;td&gt;3600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </content>
             
             
