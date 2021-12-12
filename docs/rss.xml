@@ -23,10 +23,65 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 12 Dec 2021 21:14:32 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 12 Dec 2021 21:18:05 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blackstar.pro/rss.xml" />
         
+        
+            <item>
+                <title>控制台，终端和shell的区别是什么？</title>
+                <link>https://blackstar.pro/posts/%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%92%8Cshell%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+                <guid isPermaLink="true">https://blackstar.pro/posts/%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%BB%88%E7%AB%AF%E5%92%8Cshell%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+                <pubDate>Sun, 12 Dec 2021 20:29:42 &#43;0800</pubDate>
+                
+                    <author>reuixiy@gmail.com (reuixiy)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;blockquote&gt;
+&lt;p&gt;原文章链接：&lt;a href=&#34;https://www.hanselman.com/blog/whats-the-difference-between-a-console-a-terminal-and-a-shell&#34;&gt;What&#39;s the difference between a console, a terminal, and a shell? - Scott Hanselman&#39;s Blog&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;笔者感觉原作者写的很好，故而翻译如下&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;关于这篇文章，我看到过很多类似的问题，但这些问题本身就暗含了对一些重要术语的潜在误解。例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为什么我要使用Windows Terminal而不是PowerShell？&lt;/li&gt;
+&lt;li&gt;我不需要WSL（Windows Subsystem for Linux）来使用bash，我使用Cygwin。&lt;/li&gt;
+&lt;li&gt;我能使用带着PowerShell内核的ConEmu吗？还是说我需要使用Windows Terminal？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;让我们先来澄清几个相关专业术语的概念&lt;/p&gt;
+&lt;h2 id=&#34;terminal终端&#34;&gt;TERMINAL（终端）&lt;/h2&gt;
+&lt;p&gt;单词 Terminal 来源于 terminate，用于表示通信过程的“终端”端。过去，当你提到一个基于文本的工作环境时，你经常会听到&amp;quot;dumb terminal&amp;quot;（哑终端）这个词，在这样的环境下，你身旁的计算机只负责接受键盘输入并显示文字输出，而真正的工作发生在另一端的主机或大型计算机上。&lt;/p&gt;
+&lt;p&gt;TTY 或 &amp;quot;teletypewriter&amp;quot;（电传打字机） 是最早出现的终端。你会发现它是一个打字机而非现代更常见的电子屏幕。当你在上面打字的时候，你会在看到一张纸上文字的同时把它输入计算机。当计算机响应时，你会看到打字机自动在同一张纸上打印输出结果。&lt;/p&gt;
+&lt;p&gt;当我们在&lt;em&gt;&lt;strong&gt;软件意义&lt;/strong&gt;&lt;/em&gt;上提到终端时，我们指的是 TTY 或 硬件终端 的文字软件版本，也就是负责输入输出命令行的东西（例如Windows上的那个写着 cmd 的黑框框，但 cmd 并不是终端）。&lt;a href=&#34;https://docs.microsoft.com/zh-cn/windows/terminal/&#34;&gt;Windows Terminal&lt;/a&gt;就是其中之一。它的作用是显示文本输出，也可以接受输入并将其传递给shell。但是终端并不“聪明”，因为它实际上不会对你的输入做任何处理，也不会看你的文件或进行任何”思考“，它只负责接收输入和显示输出，负责处理你输入信息的另有其人。&lt;/p&gt;
+&lt;h2 id=&#34;console控制台&#34;&gt;CONSOLE（控制台）&lt;/h2&gt;
+&lt;p&gt;在20世纪中期，人们的起居室里会有一种家具，叫做控制台或陈列柜。而在计算机领域，控制台指的是计算机的操控台或者一个内置屏幕和键盘的机柜，但它本质上仍是一个终端（计算机领域）。从（计算机）技术上讲，控制台是硬件设备，而终端则是其内部运行的软件程序。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;在软件世界中提到控制台和终端时，它们实际上是同义词。（例如IDE中的内置终端，也叫控制台）&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;shell操作系统外壳区别于操作系统内核&#34;&gt;Shell（操作系统外壳，区别于操作系统内核）&lt;/h2&gt;
+&lt;p&gt;之前提到的终端，会接受用户的输入并将其发送给另一个程序，这个应用程序就是Shell。Shell 会接收你通过终端/控制台输入的命令并将其&amp;quot;翻译&amp;quot;成操作系统内核可以理解的语言，然后调用相应的应用程序，最后生成输出并将其传递回终端以显示给用户。这里是一些常见的shell：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bash, fish, zsh, ksh, sh, tsch&lt;/li&gt;
+&lt;li&gt;PowerShell, cmd, pwsh&lt;/li&gt;
+&lt;li&gt;yori, 4dos, command.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中 bash、zsh、fish 是 &lt;code&gt;*nix&lt;/code&gt; 操作系统上常见的 shell，而cmd、power shell则是windows上较为常见的shell&lt;/p&gt;
+&lt;p&gt;注意：你对终端的选择不会也不应该影响你对Shell的选择，例如，理论上你可以使用Windows Terminal作为你的终端，并使用zsh作为你的Shell（这实际上不太可行，因为zsh不能很好地运行在Windows操作系统上，除非你使用WSL）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;冷知识: WSL 和 WSL2(the Windows Subsystem for Linux)是一个或多个完整的，运行在Windows 10上的本地 Linux。这些Linux系统是完整且真实的。WSL2通过虚拟技术，提供了一个真正的 Linux 内核，并在 Windows 上运行。而Cygwin不是真正的 Linux。Cygwin 是 GNU 和开源工具的一个大集合，它们提供了类似于 Windows 上的 Linux 的功能——但它不是 Linux。这是一个幻影。它是针对 Win32 编译的 GNU utils。这很不错，但重要的是你要知道它们之间的区别。Cygwin 可以让您运行 bash shell 脚本，但它不会运行 Apache、 Docker 或其他真正的 ELF-binaries 和 Linux 应用程序。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>通过Hugo搭建个人博客</title>

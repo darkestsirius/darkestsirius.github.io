@@ -1,7 +1,6 @@
 ---
 title: "控制台，终端和shell的区别是什么？"
 date: 2021-12-12T20:29:42+08:00
-draft: true
 ---
 
 > 原文章链接：[What's the difference between a console, a terminal, and a shell? - Scott Hanselman's Blog](https://www.hanselman.com/blog/whats-the-difference-between-a-console-a-terminal-and-a-shell)
