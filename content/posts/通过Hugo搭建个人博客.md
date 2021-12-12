@@ -150,7 +150,7 @@ draft: true
 ---
 ```
 
-我们需要把 draft : true 修改成 draft : false 才可以上传这篇文章
+我们需要把 `draft : true` 修改成 `draft : false` 才可以上传这篇文章(或者直接删除这一行)
 
 如果你希望删除某篇文章，将对应的 markdown 文件在 `contents/posts` 目录删除即可
 
@@ -167,6 +167,17 @@ hugo # 通过 `hugo` 命令生成静态文件
 git add . 
 git commit -m "init"
 ```
+
+此后，如果你生成一篇文章，并完成写作后，直接遵循以下步骤即可完成发布
+
+```shell
+hugo # 生成静态文件
+git add .
+git commit -m "xxx"
+git push -u origin main
+```
+
+写作期间可以通过 `hugo server -D` 命令预览
 
 ### 5.部署到 GitHub Pages
 
@@ -205,6 +216,8 @@ git push -u origin main # 把本地博客推送到 GitHub 远程仓库
 
 在浏览器中输入 `https://darkestsirius.github.io`，即可查看你的个人博客
 
+如果你的博客无法显示css和html样式，那么在 GitHub 仓库界面的 `settings` -> `pages` 页面点击 `Choose a theme`，选择随意一个主题即可
+
 ### 6.配置域名
 
 在 namesilo 购买域名，完成后进行域名解析
@@ -222,3 +235,7 @@ git push -u origin main # 把本地博客推送到 GitHub 远程仓库
 |  | A | 185.199.110.153 | 3600 |
 |  | A | 185.199.111.153 | 3600 |
 | www | CNAME | <你的GitHub用户名>.github.io | 3600 |
+
+然后在本地 `blog` 文件夹的 `/static` 目录中创建一个名为 `CNAME` 的文本文件（无后缀名），其内容为你的域名（不包含 `https://www.` 的内容）
+
+这之后生成、部署你的博客即可

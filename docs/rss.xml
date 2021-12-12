@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 12 Dec 2021 17:50:35 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 12 Dec 2021 18:07:38 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://darkestsirius.github.io/rss.xml" />
         
@@ -209,7 +209,7 @@ draft: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
 ---
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;我们需要把 draft : true 修改成 draft : false 才可以上传这篇文章&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;我们需要把 &lt;code&gt;draft : true&lt;/code&gt; 修改成 &lt;code&gt;draft : false&lt;/code&gt; 才可以上传这篇文章(或者直接删除这一行)&lt;/p&gt;
 &lt;p&gt;如果你希望删除某篇文章，将对应的 markdown 文件在 &lt;code&gt;contents/posts&lt;/code&gt; 目录删除即可&lt;/p&gt;
 &lt;p&gt;现在开始预览：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -233,7 +233,23 @@ git add .
 git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;init&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;5部署到-github-pages&#34;&gt;5.部署到 GitHub Pages&lt;/h3&gt;
+&lt;/div&gt;&lt;p&gt;此后，如果你生成一篇文章，并完成写作后，直接遵循以下步骤即可完成发布&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo &lt;span class=&#34;c1&#34;&gt;# 生成静态文件&lt;/span&gt;
+git add .
+git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxx&amp;#34;&lt;/span&gt;
+git push -u origin main
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;写作期间可以通过 &lt;code&gt;hugo server -D&lt;/code&gt; 命令预览&lt;/p&gt;
+&lt;h3 id=&#34;5部署到-github-pages&#34;&gt;5.部署到 GitHub Pages&lt;/h3&gt;
 &lt;h4 id=&#34;创建-github-的ssh密钥已创建的可以忽略&#34;&gt;创建 GitHub 的ssh密钥（已创建的可以忽略）&lt;/h4&gt;
 &lt;p&gt;设置 GitHub 的user name和email&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -274,6 +290,7 @@ git push -u origin main &lt;span class=&#34;c1&#34;&gt;# 把本地博客推送�
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在 GitHub 仓库界面，选择 &lt;code&gt;settings&lt;/code&gt; -&amp;gt; &lt;code&gt;pages&lt;/code&gt;,修改 &lt;code&gt;source&lt;/code&gt; 选项的值，其中的 &lt;code&gt;branch&lt;/code&gt; 由 &lt;code&gt;master&lt;/code&gt; 替换成 &lt;code&gt;main&lt;/code&gt;,把 &lt;code&gt;/(root)&lt;/code&gt; 换成 &lt;code&gt;/docs&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;在浏览器中输入 &lt;code&gt;https://darkestsirius.github.io&lt;/code&gt;，即可查看你的个人博客&lt;/p&gt;
+&lt;p&gt;如果你的博客无法显示css和html样式，那么在 GitHub 仓库界面的 &lt;code&gt;settings&lt;/code&gt; -&amp;gt; &lt;code&gt;pages&lt;/code&gt; 页面点击 &lt;code&gt;Choose a theme&lt;/code&gt;，选择随意一个主题即可&lt;/p&gt;
 &lt;h3 id=&#34;6配置域名&#34;&gt;6.配置域名&lt;/h3&gt;
 &lt;p&gt;在 namesilo 购买域名，完成后进行域名解析&lt;/p&gt;
 &lt;ul&gt;
@@ -323,6 +340,8 @@ git push -u origin main &lt;span class=&#34;c1&#34;&gt;# 把本地博客推送�
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;然后在本地 &lt;code&gt;blog&lt;/code&gt; 文件夹的 &lt;code&gt;/static&lt;/code&gt; 目录中创建一个名为 &lt;code&gt;CNAME&lt;/code&gt; 的文本文件（无后缀名），其内容为你的域名（不包含 &lt;code&gt;https://www.&lt;/code&gt; 的内容）&lt;/p&gt;
+&lt;p&gt;这之后生成、部署你的博客即可&lt;/p&gt;
 </description>
                 
                 
