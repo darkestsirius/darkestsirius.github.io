@@ -218,9 +218,9 @@ git push -u origin main # 把本地博客推送到 GitHub 远程仓库
 
 如果你的博客无法显示css和html样式，那么在 GitHub 仓库界面的 `settings` -> `pages` 页面点击 `Choose a theme`，选择随意一个主题即可
 
-### 6.配置域名
+### 6.为你的博客网站配置域名
 
-在 namesilo 购买域名，完成后进行域名解析
+建议在 namesilo 购买域名，完成后在官网进行域名解析
 
 - 如果没有 `.com` `.org`等域名后缀，可以选择 `.pro` `.io` `.me`
 
@@ -236,6 +236,6 @@ git push -u origin main # 把本地博客推送到 GitHub 远程仓库
 |  | A | 185.199.111.153 | 3600 |
 | www | CNAME | <你的GitHub用户名>.github.io | 3600 |
 
-然后在本地 `blog` 文件夹的 `/static` 目录中创建一个名为 `CNAME` 的文本文件（无后缀名），其内容为你的域名（不包含 `https://www.` 的内容）
+然后在本地 `blog` 文件夹的 `/static` 目录中创建一个名为 `CNAME` 的文本文件（无后缀名），其内容为你的域名（注意不包含 `https://www.` 的内容）
 
-这之后生成、部署你的博客即可
+这之后生成、部署你的博客，你就可以在浏览器通过购买的域名访问它了（域名解析需要一定的时间）

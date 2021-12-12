@@ -8,7 +8,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Sirius的空间</title>
-        <link>https://darkestsirius.github.io/</link>
+        <link>https://blackstar.pro/</link>
         <description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
         <generator>Hugo 0.89.4 https://gohugo.io/</generator>
         
@@ -23,15 +23,15 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 12 Dec 2021 18:07:38 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 12 Dec 2021 18:36:02 &#43;0800</lastBuildDate>
         
-            <atom:link rel="self" type="application/rss&#43;xml" href="https://darkestsirius.github.io/rss.xml" />
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://blackstar.pro/rss.xml" />
         
         
             <item>
                 <title>通过Hugo搭建个人博客</title>
-                <link>https://darkestsirius.github.io/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
-                <guid isPermaLink="true">https://darkestsirius.github.io/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+                <link>https://blackstar.pro/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+                <guid isPermaLink="true">https://blackstar.pro/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
                 <pubDate>Sat, 11 Dec 2021 23:30:33 &#43;0800</pubDate>
                 
                     <author>reuixiy@gmail.com (reuixiy)</author>
@@ -291,8 +291,8 @@ git push -u origin main &lt;span class=&#34;c1&#34;&gt;# 把本地博客推送�
 &lt;/div&gt;&lt;p&gt;在 GitHub 仓库界面，选择 &lt;code&gt;settings&lt;/code&gt; -&amp;gt; &lt;code&gt;pages&lt;/code&gt;,修改 &lt;code&gt;source&lt;/code&gt; 选项的值，其中的 &lt;code&gt;branch&lt;/code&gt; 由 &lt;code&gt;master&lt;/code&gt; 替换成 &lt;code&gt;main&lt;/code&gt;,把 &lt;code&gt;/(root)&lt;/code&gt; 换成 &lt;code&gt;/docs&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;在浏览器中输入 &lt;code&gt;https://darkestsirius.github.io&lt;/code&gt;，即可查看你的个人博客&lt;/p&gt;
 &lt;p&gt;如果你的博客无法显示css和html样式，那么在 GitHub 仓库界面的 &lt;code&gt;settings&lt;/code&gt; -&amp;gt; &lt;code&gt;pages&lt;/code&gt; 页面点击 &lt;code&gt;Choose a theme&lt;/code&gt;，选择随意一个主题即可&lt;/p&gt;
-&lt;h3 id=&#34;6配置域名&#34;&gt;6.配置域名&lt;/h3&gt;
-&lt;p&gt;在 namesilo 购买域名，完成后进行域名解析&lt;/p&gt;
+&lt;h3 id=&#34;6为你的博客网站配置域名&#34;&gt;6.为你的博客网站配置域名&lt;/h3&gt;
+&lt;p&gt;建议在 namesilo 购买域名，完成后在官网进行域名解析&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;如果没有 &lt;code&gt;.com&lt;/code&gt; &lt;code&gt;.org&lt;/code&gt;等域名后缀，可以选择 &lt;code&gt;.pro&lt;/code&gt; &lt;code&gt;.io&lt;/code&gt; &lt;code&gt;.me&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -340,8 +340,8 @@ git push -u origin main &lt;span class=&#34;c1&#34;&gt;# 把本地博客推送�
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;然后在本地 &lt;code&gt;blog&lt;/code&gt; 文件夹的 &lt;code&gt;/static&lt;/code&gt; 目录中创建一个名为 &lt;code&gt;CNAME&lt;/code&gt; 的文本文件（无后缀名），其内容为你的域名（不包含 &lt;code&gt;https://www.&lt;/code&gt; 的内容）&lt;/p&gt;
-&lt;p&gt;这之后生成、部署你的博客即可&lt;/p&gt;
+&lt;p&gt;然后在本地 &lt;code&gt;blog&lt;/code&gt; 文件夹的 &lt;code&gt;/static&lt;/code&gt; 目录中创建一个名为 &lt;code&gt;CNAME&lt;/code&gt; 的文本文件（无后缀名），其内容为你的域名（注意不包含 &lt;code&gt;https://www.&lt;/code&gt; 的内容）&lt;/p&gt;
+&lt;p&gt;这之后生成、部署你的博客，你就可以在浏览器通过购买的域名访问它了（域名解析需要一定的时间）&lt;/p&gt;
 </description>
                 
                 
