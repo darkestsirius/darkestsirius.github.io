@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 12 Dec 2021 18:36:02 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 12 Dec 2021 19:03:17 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blackstar.pro/rss.xml" />
         
@@ -38,8 +38,7 @@
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;p&gt;近日通过 Hugo + GitHub Pages 搭建个人博客，踩了不少坑，在这里记录下来&lt;/p&gt;
-&lt;h2 id=&#34;前言为什么要写博客&#34;&gt;前言——为什么要写博客？&lt;/h2&gt;
+                    <description>&lt;h2 id=&#34;前言为什么要写博客&#34;&gt;前言——为什么要写博客？&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;写一篇技术博客，首先面对的用户应该是未来的自己。人的记忆力有限，所以谁也不敢保证在未来还可以掌握现在的技能。但是与笔记不同，博客是要发表的，所以我们自然而然的就会想好好的记录，这有助于提升我们的记录水准。同时博客可以和同行交流，具有社交属性。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -244,11 +243,12 @@ git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;init&amp;#34;&lt;/span&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo &lt;span class=&#34;c1&#34;&gt;# 生成静态文件&lt;/span&gt;
 git add .
-git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxx&amp;#34;&lt;/span&gt;
-git push -u origin main
+git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxx&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# xxx 由你自定义&lt;/span&gt;
+git push -u origin main &lt;span class=&#34;c1&#34;&gt;# 现在你还没有关联GitHub pages 远程仓库，这条命令还无法使用！&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;写作期间可以通过 &lt;code&gt;hugo server -D&lt;/code&gt; 命令预览&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;或者组合成一条命令 &lt;code&gt;hugo &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &#39;发布新文章&#39; &amp;amp;&amp;amp; git push -u origin main&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;写作期间可以通过 &lt;code&gt;hugo server -D&lt;/code&gt; 命令在浏览器中实时预览&lt;/p&gt;
 &lt;h3 id=&#34;5部署到-github-pages&#34;&gt;5.部署到 GitHub Pages&lt;/h3&gt;
 &lt;h4 id=&#34;创建-github-的ssh密钥已创建的可以忽略&#34;&gt;创建 GitHub 的ssh密钥（已创建的可以忽略）&lt;/h4&gt;
 &lt;p&gt;设置 GitHub 的user name和email&lt;/p&gt;
@@ -271,7 +271,7 @@ git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_emai
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在系统当前用户文件夹下生成了私钥 id_rsa 和公钥 id_rsa.pub&lt;/p&gt;
-&lt;p&gt;然后将打开公钥文件，将其中的内容复制到 GitHub 上&lt;/p&gt;
+&lt;p&gt;然后将打开公钥文件，将其中的内容复制到 GitHub 上，具体内容Google即可&lt;/p&gt;
 &lt;h4 id=&#34;部署&#34;&gt;部署&lt;/h4&gt;
 &lt;p&gt;这部分需要使用到一个叫做github page的东西，Github Pages 本质上是一个静态网站托管系统，你可以使用它为你的每一个仓库制作一个静态网页入口。&lt;/p&gt;
 &lt;p&gt;首先在 Github 上创建一个 Repository ，仓库命称为 &lt;code&gt;你的Github用户名.github.io&lt;/code&gt;，譬如我的博客仓库是&lt;code&gt;darkestsirius.github.io&lt;/code&gt;，这样你就可以生成一个用户页面&lt;/p&gt;
@@ -292,7 +292,7 @@ git push -u origin main &lt;span class=&#34;c1&#34;&gt;# 把本地博客推送�
 &lt;p&gt;在浏览器中输入 &lt;code&gt;https://darkestsirius.github.io&lt;/code&gt;，即可查看你的个人博客&lt;/p&gt;
 &lt;p&gt;如果你的博客无法显示css和html样式，那么在 GitHub 仓库界面的 &lt;code&gt;settings&lt;/code&gt; -&amp;gt; &lt;code&gt;pages&lt;/code&gt; 页面点击 &lt;code&gt;Choose a theme&lt;/code&gt;，选择随意一个主题即可&lt;/p&gt;
 &lt;h3 id=&#34;6为你的博客网站配置域名&#34;&gt;6.为你的博客网站配置域名&lt;/h3&gt;
-&lt;p&gt;建议在 namesilo 购买域名，完成后在官网进行域名解析&lt;/p&gt;
+&lt;p&gt;建议在 namesilo 购买域名，完成后在 namesilo 官网进行域名解析&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;如果没有 &lt;code&gt;.com&lt;/code&gt; &lt;code&gt;.org&lt;/code&gt;等域名后缀，可以选择 &lt;code&gt;.pro&lt;/code&gt; &lt;code&gt;.io&lt;/code&gt; &lt;code&gt;.me&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -341,7 +341,7 @@ git push -u origin main &lt;span class=&#34;c1&#34;&gt;# 把本地博客推送�
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;然后在本地 &lt;code&gt;blog&lt;/code&gt; 文件夹的 &lt;code&gt;/static&lt;/code&gt; 目录中创建一个名为 &lt;code&gt;CNAME&lt;/code&gt; 的文本文件（无后缀名），其内容为你的域名（注意不包含 &lt;code&gt;https://www.&lt;/code&gt; 的内容）&lt;/p&gt;
-&lt;p&gt;这之后生成、部署你的博客，你就可以在浏览器通过购买的域名访问它了（域名解析需要一定的时间）&lt;/p&gt;
+&lt;p&gt;然后按照之前的教程生成、部署你的博客，你就可以在浏览器通过购买的域名访问它了（域名解析需要一定的时间）&lt;/p&gt;
 </description>
                 
                 

@@ -1,10 +1,7 @@
 ---
 title: "通过Hugo搭建个人博客"
 date: 2021-12-11T23:30:33+08:00
-draft: false
 ---
-
-近日通过 Hugo + GitHub Pages 搭建个人博客，踩了不少坑，在这里记录下来
 
 ## 前言——为什么要写博客？
 
@@ -173,11 +170,13 @@ git commit -m "init"
 ```shell
 hugo # 生成静态文件
 git add .
-git commit -m "xxx"
-git push -u origin main
+git commit -m "xxx" # xxx 由你自定义
+git push -u origin main # 现在你还没有关联GitHub pages 远程仓库，这条命令还无法使用！
 ```
 
-写作期间可以通过 `hugo server -D` 命令预览
+或者组合成一条命令 `hugo && git add . && git commit -m '发布新文章' && git push -u origin main`
+
+写作期间可以通过 `hugo server -D` 命令在浏览器中实时预览
 
 ### 5.部署到 GitHub Pages
 
@@ -196,7 +195,7 @@ ssh-keygen -t rsa -C "your_email@example.com"
 
 在系统当前用户文件夹下生成了私钥 id_rsa 和公钥 id_rsa.pub
 
-然后将打开公钥文件，将其中的内容复制到 GitHub 上
+然后将打开公钥文件，将其中的内容复制到 GitHub 上，具体内容Google即可
 
 #### 部署
 
@@ -220,7 +219,7 @@ git push -u origin main # 把本地博客推送到 GitHub 远程仓库
 
 ### 6.为你的博客网站配置域名
 
-建议在 namesilo 购买域名，完成后在官网进行域名解析
+建议在 namesilo 购买域名，完成后在 namesilo 官网进行域名解析
 
 - 如果没有 `.com` `.org`等域名后缀，可以选择 `.pro` `.io` `.me`
 
@@ -238,4 +237,4 @@ git push -u origin main # 把本地博客推送到 GitHub 远程仓库
 
 然后在本地 `blog` 文件夹的 `/static` 目录中创建一个名为 `CNAME` 的文本文件（无后缀名），其内容为你的域名（注意不包含 `https://www.` 的内容）
 
-这之后生成、部署你的博客，你就可以在浏览器通过购买的域名访问它了（域名解析需要一定的时间）
+然后按照之前的教程生成、部署你的博客，你就可以在浏览器通过购买的域名访问它了（域名解析需要一定的时间）
