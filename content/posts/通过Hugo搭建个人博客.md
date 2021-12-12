@@ -140,7 +140,21 @@ hugo new posts/hello-world.md
 hugo new about/_index.md
 ```
 
-现在：
+这里面值得注意的是，通过上述命令行创建的文章中，会自动生成一部分文本如下
+
+```shell
+---
+title: "hello-world"
+date: 2019-03-26T08:47:11+01:00
+draft: true
+---
+```
+
+我们需要把 draft : true 修改成 draft : false 才可以上传这篇文章
+
+如果你希望删除某篇文章，将对应的 markdown 文件在 `contents/posts` 目录删除即可
+
+现在开始预览：
 
 ```shell
 hugo server -D # 本地预览命令，-D参数是为了让草稿加入预览
@@ -148,10 +162,10 @@ hugo server -D # 本地预览命令，-D参数是为了让草稿加入预览
 
 在浏览器中打开 http://localhost:1313/，你已经成功在本地搭建好博客了🎉🎉🍻
 
-通过 `hugo` 命令然后生成静态文件
-
 ```shell
-hugo
+hugo # 通过 `hugo` 命令生成静态文件
+git add . 
+git commit -m "init"
 ```
 
 ### 5.部署到 GitHub Pages
@@ -184,8 +198,27 @@ ssh-keygen -t rsa -C "your_email@example.com"
 ```shell
 git remote add origin git@github.com:darkestsirius/darkestsirius.github.io.git # 这里应该是你的 GitHub 仓库的 ssh 地址
 git branch -M main # 替换成 main 分支
-git push -u origin main # 推送到远程仓库
+git push -u origin main # 把本地博客推送到 GitHub 远程仓库
 ```
 
-在 GitHub 仓库界面，选择 `settings` -> `pages`,把 `source` 设置项中的 `branch` 由 `master` 替换成 `main`,把 `/(root)` 换成 `/docs`
+在 GitHub 仓库界面，选择 `settings` -> `pages`,修改 `source` 选项的值，其中的 `branch` 由 `master` 替换成 `main`,把 `/(root)` 换成 `/docs`
 
+在浏览器中输入 `https://darkestsirius.github.io`，即可查看你的个人博客
+
+### 6.配置域名
+
+在 namesilo 购买域名，完成后进行域名解析
+
+- 如果没有 `.com` `.org`等域名后缀，可以选择 `.pro` `.io` `.me`
+
+#### 域名解析
+
+添加4个A类型和一个CNAME类型
+
+｜ hostname ｜ type    ｜ address                    ｜ TTL  ｜
+｜ -------- ｜ ----    ｜ ---                        ｜ ---  ｜
+｜          ｜ A       ｜ 185.199.108.153            ｜ 3600 ｜
+｜          ｜ A       ｜ 185.199.109.153            ｜ 3600 ｜
+｜          ｜ A       ｜ 185.199.110.153            ｜ 3600 ｜
+｜          ｜ A       ｜ 185.199.111.153            ｜ 3600 ｜
+｜ www      ｜  CNAME  ｜ <你的GitHub用户名>.github.io ｜ 3600 ｜

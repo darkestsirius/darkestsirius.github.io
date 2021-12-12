@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Sirius的空间</title>
     <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2021-12-12T16:22:50&#43;08:00</updated>
+    <updated>2021-12-12T17:41:34&#43;08:00</updated>
     <id>https://darkestsirius.github.io/</id>
     <link rel="alternate" type="text/html" href="https://darkestsirius.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://darkestsirius.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">通过Hugo搭建个人博客</title>
             <link rel="alternate" type="text/html" href="https://darkestsirius.github.io/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
             <id>https://darkestsirius.github.io/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
-            <updated>2021-12-12T16:08:41&#43;08:00</updated>
+            <updated>2021-12-12T17:41:25&#43;08:00</updated>
             <published>2021-12-11T23:30:33&#43;08:00</published>
             <author>
                     <name>reuixiy</name>
@@ -183,7 +183,26 @@ git submodule add --depth &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; https://g
 hugo new about/_index.md
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;现在：&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;这里面值得注意的是，通过上述命令行创建的文章中，会自动生成一部分文本如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;---
+title: &lt;span class=&#34;s2&#34;&gt;&amp;#34;hello-world&amp;#34;&lt;/span&gt;
+date: 2019-03-26T08:47:11+01:00
+draft: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们需要把 draft : true 修改成 draft : false 才可以上传这篇文章&lt;/p&gt;
+&lt;p&gt;如果你希望删除某篇文章，将对应的 markdown 文件在 &lt;code&gt;contents/posts&lt;/code&gt; 目录删除即可&lt;/p&gt;
+&lt;p&gt;现在开始预览：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -193,13 +212,16 @@ hugo new about/_index.md
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在浏览器中打开 http://localhost:1313/，你已经成功在本地搭建好博客了🎉🎉🍻&lt;/p&gt;
-&lt;p&gt;通过 &lt;code&gt;hugo&lt;/code&gt; 命令然后生成静态文件&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo &lt;span class=&#34;c1&#34;&gt;# 通过 `hugo` 命令生成静态文件&lt;/span&gt;
+git add . 
+git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;init&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;5部署到-github-pages&#34;&gt;5.部署到 GitHub Pages&lt;/h3&gt;
@@ -238,10 +260,25 @@ git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_emai
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git remote add origin git@github.com:darkestsirius/darkestsirius.github.io.git &lt;span class=&#34;c1&#34;&gt;# 这里应该是你的 GitHub 仓库的 ssh 地址&lt;/span&gt;
 git branch -M main &lt;span class=&#34;c1&#34;&gt;# 替换成 main 分支&lt;/span&gt;
-git push -u origin main &lt;span class=&#34;c1&#34;&gt;# 推送到远程仓库&lt;/span&gt;
+git push -u origin main &lt;span class=&#34;c1&#34;&gt;# 把本地博客推送到 GitHub 远程仓库&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;在 GitHub 仓库界面，选择 &lt;code&gt;settings&lt;/code&gt; -&amp;gt; &lt;code&gt;pages&lt;/code&gt;,把 &lt;code&gt;source&lt;/code&gt; 设置项中的 &lt;code&gt;branch&lt;/code&gt; 由 &lt;code&gt;master&lt;/code&gt; 替换成 &lt;code&gt;main&lt;/code&gt;,把 &lt;code&gt;/(root)&lt;/code&gt; 换成 &lt;code&gt;/docs&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;在 GitHub 仓库界面，选择 &lt;code&gt;settings&lt;/code&gt; -&amp;gt; &lt;code&gt;pages&lt;/code&gt;,修改 &lt;code&gt;source&lt;/code&gt; 选项的值，其中的 &lt;code&gt;branch&lt;/code&gt; 由 &lt;code&gt;master&lt;/code&gt; 替换成 &lt;code&gt;main&lt;/code&gt;,把 &lt;code&gt;/(root)&lt;/code&gt; 换成 &lt;code&gt;/docs&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在浏览器中输入 &lt;code&gt;https://darkestsirius.github.io&lt;/code&gt;，即可查看你的个人博客&lt;/p&gt;
+&lt;h3 id=&#34;6配置域名&#34;&gt;6.配置域名&lt;/h3&gt;
+&lt;p&gt;在 namesilo 购买域名，完成后进行域名解析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果没有 &lt;code&gt;.com&lt;/code&gt; &lt;code&gt;.org&lt;/code&gt;等域名后缀，可以选择 &lt;code&gt;.pro&lt;/code&gt; &lt;code&gt;.io&lt;/code&gt; &lt;code&gt;.me&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;域名解析&#34;&gt;域名解析&lt;/h4&gt;
+&lt;p&gt;添加4个A类型和一个CNAME类型&lt;/p&gt;
+&lt;p&gt;｜ hostname ｜ type    ｜ address                    ｜ TTL  ｜
+｜ -------- ｜ ----    ｜ ---                        ｜ ---  ｜
+｜          ｜ A       ｜ 185.199.108.153            ｜ 3600 ｜
+｜          ｜ A       ｜ 185.199.109.153            ｜ 3600 ｜
+｜          ｜ A       ｜ 185.199.110.153            ｜ 3600 ｜
+｜          ｜ A       ｜ 185.199.111.153            ｜ 3600 ｜
+｜ www      ｜  CNAME  ｜ &amp;lt;你的GitHub用户名&amp;gt;.github.io ｜ 3600 ｜&lt;/p&gt;
 </content>
             
             
