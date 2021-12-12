@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Sirius的空间</title>
     <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2021-12-12T16:06:51&#43;08:00</updated>
+    <updated>2021-12-12T16:12:50&#43;08:00</updated>
     <id>https://darkestsirius.github.io/</id>
     <link rel="alternate" type="text/html" href="https://darkestsirius.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://darkestsirius.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">通过Hugo搭建个人博客</title>
             <link rel="alternate" type="text/html" href="https://darkestsirius.github.io/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
             <id>https://darkestsirius.github.io/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
-            <updated>2021-12-12T16:06:46&#43;08:00</updated>
+            <updated>2021-12-12T16:08:41&#43;08:00</updated>
             <published>2021-12-11T23:30:33&#43;08:00</published>
             <author>
                     <name>reuixiy</name>
@@ -192,8 +192,8 @@ hugo new about/_index.md
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server -D &lt;span class=&#34;c1&#34;&gt;# 本地预览命令，-D参数是为了让草稿加入预览&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;不到 100 ms 后，在浏览器中打开 http://localhost:1313/，你已经成功在本地搭建好博客了🎉🎉🍻&lt;/p&gt;
-&lt;p&gt;然后生成静态文件&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;在浏览器中打开 http://localhost:1313/，你已经成功在本地搭建好博客了🎉🎉🍻&lt;/p&gt;
+&lt;p&gt;通过 &lt;code&gt;hugo&lt;/code&gt; 命令然后生成静态文件&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
