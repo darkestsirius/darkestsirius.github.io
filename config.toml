@@ -1,7 +1,7 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://example.com/"
+baseURL = "https://darkestsirius.github.io"
 title = "Sirius的空间"
 languageCode = "en"
 hasCJKLanguage = true

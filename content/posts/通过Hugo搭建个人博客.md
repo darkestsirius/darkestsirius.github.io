@@ -4,11 +4,11 @@ date: 2021-12-11T23:30:33+08:00
 draft: false
 ---
 
-## 前言
-
 近日通过 Hugo + GitHub Pages 搭建个人博客，踩了不少坑，在这里记录下来
 
-## 一些问题
+## 前言——为什么要写博客？
+
+> 写一篇技术博客，首先面对的用户应该是未来的自己。人的记忆力有限，所以谁也不敢保证在未来还可以掌握现在的技能。但是与笔记不同，博客是要发表的，所以我们自然而然的就会想好好的记录，这有助于提升我们的记录水准。同时博客可以和同行交流，具有社交属性。
 
 ### 为什么搭建个人博客，而不是使用知乎、简书和博客园等平台？
 
@@ -100,7 +100,6 @@ tree # 使用 tree 工具查看文件夹结构
 ```shell
 cd blog # 进入blog文件夹
 git init # git初始化
-git branch -M main # 替换成 main 分支
 git submodule add --depth 1 https://github.com/reuixiy/hugo-theme-meme.git themes/meme # 该命令在 themes 文件夹中安装主题
 ```
 
@@ -126,6 +125,12 @@ git submodule update --rebase --remote
 rm config.toml && cp themes/meme/config-examples/zh-cn/config.toml config.toml 
 ```
 
+#### 配置 `conifg.toml` 文件
+
+将 `baseURL` 换成 `https://<你的GitHub用户名>.github.io`
+
+在文件中增加 `publishDir = "docs"` 配置项
+
 ### 4.新建一篇文章
 
 由于 Hugo 并不会提供默认的示例文章，所以如果你想在安装和配置完后立即体验 MemE 的话，还需新建一篇文章和一个关于页面
@@ -138,17 +143,49 @@ hugo new about/_index.md
 现在：
 
 ```shell
-hugo server -D
+hugo server -D # 本地预览命令，-D参数是为了让草稿加入预览
 ```
 
-不到 100 ms 后，在浏览器中打开 http://localhost:1313/，恭喜你！你已经成功在本地搭建好博客了🎉🎉🍻！享受 MemE 的简约和 Hugo 的飞速吧！
+在浏览器中打开 http://localhost:1313/，你已经成功在本地搭建好博客了🎉🎉🍻
 
-### 5.部署到GitHub Pages
+通过 `hugo` 命令然后生成静态文件
 
-ss
+```shell
+hugo
+```
 
-新建一篇文章，编辑内容。
-本地预览网站呈现效果。
-构建 Hugo 网站。
-提交修改至 Git 本地库。
-将修改推至远程库
+### 5.部署到 GitHub Pages
+
+#### 创建 GitHub 的ssh密钥（已创建的可以忽略）
+
+设置 GitHub 的user name和email
+
+```shell
+git config --global user.name "your_name" 
+git config --global user.email "your_email@example.com" # 你的 GitHub 邮箱
+```
+
+```shell
+ssh-keygen -t rsa -C "your_email@example.com"
+```
+
+在系统当前用户文件夹下生成了私钥 id_rsa 和公钥 id_rsa.pub
+
+然后将打开公钥文件，将其中的内容复制到 GitHub 上
+
+#### 部署
+
+这部分需要使用到一个叫做github page的东西，Github Pages 本质上是一个静态网站托管系统，你可以使用它为你的每一个仓库制作一个静态网页入口。
+
+首先在 Github 上创建一个 Repository ，仓库命称为 `你的Github用户名.github.io`，譬如我的博客仓库是`darkestsirius.github.io`，这样你就可以生成一个用户页面
+
+创建成功后，根据 GitHub 给出的提示，在本地终端中输入
+
+```shell
+git remote add origin git@github.com:darkestsirius/darkestsirius.github.io.git # 这里应该是你的 GitHub 仓库的 ssh 地址
+git branch -M main # 替换成 main 分支
+git push -u origin main # 推送到远程仓库
+```
+
+在 GitHub 仓库界面，选择 `settings` -> `pages`,把 `source` 设置项中的 `branch` 由 `master` 替换成 `main`,把 `/(root)` 换成 `/docs`
+

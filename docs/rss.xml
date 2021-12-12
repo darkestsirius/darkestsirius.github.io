@@ -8,7 +8,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Sirius的空间</title>
-        <link>https://example.com/</link>
+        <link>https://darkestsirius.github.io/</link>
         <description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
         <generator>Hugo 0.89.4 https://gohugo.io/</generator>
         
@@ -23,24 +23,26 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 12 Dec 2021 13:51:38 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 12 Dec 2021 16:06:51 &#43;0800</lastBuildDate>
         
-            <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://darkestsirius.github.io/rss.xml" />
         
         
             <item>
                 <title>通过Hugo搭建个人博客</title>
-                <link>https://example.com/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
-                <guid isPermaLink="true">https://example.com/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+                <link>https://darkestsirius.github.io/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+                <guid isPermaLink="true">https://darkestsirius.github.io/posts/%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
                 <pubDate>Sat, 11 Dec 2021 23:30:33 &#43;0800</pubDate>
                 
                     <author>reuixiy@gmail.com (reuixiy)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;近日通过 Hugo + GitHub Pages 搭建个人博客，踩了不少坑，在这里记录下来&lt;/p&gt;
-&lt;h2 id=&#34;一些问题&#34;&gt;一些问题&lt;/h2&gt;
+                    <description>&lt;p&gt;近日通过 Hugo + GitHub Pages 搭建个人博客，踩了不少坑，在这里记录下来&lt;/p&gt;
+&lt;h2 id=&#34;前言为什么要写博客&#34;&gt;前言——为什么要写博客？&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;写一篇技术博客，首先面对的用户应该是未来的自己。人的记忆力有限，所以谁也不敢保证在未来还可以掌握现在的技能。但是与笔记不同，博客是要发表的，所以我们自然而然的就会想好好的记录，这有助于提升我们的记录水准。同时博客可以和同行交流，具有社交属性。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;为什么搭建个人博客而不是使用知乎简书和博客园等平台&#34;&gt;为什么搭建个人博客，而不是使用知乎、简书和博客园等平台？&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;个人博客更自由，不必担心被第三方删帖、监控&lt;/li&gt;
@@ -175,7 +177,10 @@ git submodule add --depth &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; https://g
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;rm config.toml &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cp themes/meme/config-examples/zh-cn/config.toml config.toml 
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;4新建一篇文章&#34;&gt;4.新建一篇文章&lt;/h3&gt;
+&lt;/div&gt;&lt;h4 id=&#34;配置-conifgtoml-文件&#34;&gt;配置 &lt;code&gt;conifg.toml&lt;/code&gt; 文件&lt;/h4&gt;
+&lt;p&gt;将 &lt;code&gt;baseURL&lt;/code&gt; 换成 &lt;code&gt;https://&amp;lt;你的GitHub用户名&amp;gt;.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在文件中增加 &lt;code&gt;publishDir = &amp;quot;docs&amp;quot;&lt;/code&gt; 配置项&lt;/p&gt;
+&lt;h3 id=&#34;4新建一篇文章&#34;&gt;4.新建一篇文章&lt;/h3&gt;
 &lt;p&gt;由于 Hugo 并不会提供默认的示例文章，所以如果你想在安装和配置完后立即体验 MemE 的话，还需新建一篇文章和一个关于页面&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -193,16 +198,59 @@ hugo new about/_index.md
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server -D
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server -D &lt;span class=&#34;c1&#34;&gt;# 本地预览命令，-D参数是为了让草稿加入预览&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;不到 100 ms 后，在浏览器中打开 http://localhost:1313/，恭喜你！你已经成功在本地搭建好博客了🎉🎉🍻！享受 MemE 的简约和 Hugo 的飞速吧！&lt;/p&gt;
-&lt;h3 id=&#34;5&#34;&gt;5.&lt;/h3&gt;
-&lt;p&gt;新建一篇文章，编辑内容。
-本地预览网站呈现效果。
-构建 Hugo 网站。
-提交修改至 Git 本地库。
-将修改推至远程库&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;不到 100 ms 后，在浏览器中打开 http://localhost:1313/，你已经成功在本地搭建好博客了🎉🎉🍻&lt;/p&gt;
+&lt;p&gt;然后生成静态文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;5部署到-github-pages&#34;&gt;5.部署到 GitHub Pages&lt;/h3&gt;
+&lt;h4 id=&#34;创建-github-的ssh密钥已创建的可以忽略&#34;&gt;创建 GitHub 的ssh密钥（已创建的可以忽略）&lt;/h4&gt;
+&lt;p&gt;设置 GitHub 的user name和email&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git config --global user.name &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_name&amp;#34;&lt;/span&gt; 
+git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_email@example.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 你的 GitHub 邮箱&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;ssh-keygen -t rsa -C &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_email@example.com&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在系统当前用户文件夹下生成了私钥 id_rsa 和公钥 id_rsa.pub&lt;/p&gt;
+&lt;p&gt;然后将打开公钥文件，将其中的内容复制到 GitHub 上&lt;/p&gt;
+&lt;h4 id=&#34;部署&#34;&gt;部署&lt;/h4&gt;
+&lt;p&gt;这部分需要使用到一个叫做github page的东西，Github Pages 本质上是一个静态网站托管系统，你可以使用它为你的每一个仓库制作一个静态网页入口。&lt;/p&gt;
+&lt;p&gt;首先在 Github 上创建一个 Repository ，仓库命称为 &lt;code&gt;你的Github用户名.github.io&lt;/code&gt;，譬如我的博客仓库是&lt;code&gt;darkestsirius.github.io&lt;/code&gt;，这样你就可以生成一个用户页面&lt;/p&gt;
+&lt;p&gt;创建成功后，根据 GitHub 给出的提示，在本地终端中输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git remote add origin git@github.com:darkestsirius/darkestsirius.github.io.git &lt;span class=&#34;c1&#34;&gt;# 这里应该是你的 GitHub 仓库的 ssh 地址&lt;/span&gt;
+git branch -M main &lt;span class=&#34;c1&#34;&gt;# 替换成 main 分支&lt;/span&gt;
+git push -u origin main &lt;span class=&#34;c1&#34;&gt;# 推送到远程仓库&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在 GitHub 仓库界面，选择 &lt;code&gt;settings&lt;/code&gt; -&amp;gt; &lt;code&gt;pages&lt;/code&gt;,把 &lt;code&gt;source&lt;/code&gt; 设置项中的 &lt;code&gt;branch&lt;/code&gt; 由 &lt;code&gt;master&lt;/code&gt; 替换成 &lt;code&gt;main&lt;/code&gt;,把 &lt;code&gt;/(root)&lt;/code&gt; 换成 &lt;code&gt;/docs&lt;/code&gt;&lt;/p&gt;
 </description>
                 
                 
