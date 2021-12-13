@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 12 Dec 2021 22:05:44 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 13 Dec 2021 09:17:47 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blackstar.pro/rss.xml" />
         
@@ -38,11 +38,9 @@
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;div&gt;
-$$
+                    <description>&lt;p&gt;$$
 e^i=1
-$$
-&lt;/div&gt;
+$$&lt;/p&gt;
 </description>
                 
                 
@@ -331,7 +329,7 @@ git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxx&amp;#34;&lt;/span&gt; 
 git push -u origin main &lt;span class=&#34;c1&#34;&gt;# 现在你还没有关联GitHub pages 远程仓库，这条命令还无法使用！&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;或者组合成一条命令 &lt;code&gt;hugo &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &#39;发布新文章&#39; &amp;amp;&amp;amp; git push -u origin main&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;或者组合成一条命令 &lt;code&gt;hugo &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &#39;new posts&#39; &amp;amp;&amp;amp; git push -u origin main&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;写作期间可以通过 &lt;code&gt;hugo server -D&lt;/code&gt; 命令在浏览器中实时预览&lt;/p&gt;
 &lt;h3 id=&#34;5部署到-github-pages&#34;&gt;5.部署到 GitHub Pages&lt;/h3&gt;
 &lt;h4 id=&#34;创建-github-的ssh密钥已创建的可以忽略&#34;&gt;创建 GitHub 的ssh密钥（已创建的可以忽略）&lt;/h4&gt;

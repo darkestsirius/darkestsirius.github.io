@@ -174,7 +174,7 @@ git commit -m "xxx" # xxx 由你自定义
 git push -u origin main # 现在你还没有关联GitHub pages 远程仓库，这条命令还无法使用！
 ```
 
-或者组合成一条命令 `hugo && git add . && git commit -m '发布新文章' && git push -u origin main`
+或者组合成一条命令 `hugo && git add . && git commit -m 'new posts' && git push -u origin main`
 
 写作期间可以通过 `hugo server -D` 命令在浏览器中实时预览
 
