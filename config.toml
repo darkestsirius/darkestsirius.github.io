@@ -3,7 +3,7 @@
 
 baseURL = "https://blackstar.pro"
 title = "Sirius的空间"
-languageCode = "en"
+languageCode = "en-us"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
 copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)"
@@ -17,7 +17,7 @@ theme = "meme"
 newContentEditor = ""
 
 # i18n
-defaultContentLanguage = "en"
+defaultContentLanguage = "en-us"
 defaultContentLanguageInSubdir = false
 
 # 是否复数化列表页面的标题
