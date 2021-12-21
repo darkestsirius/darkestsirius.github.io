@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
     <title type="text">Sirius的空间</title>
     <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2021-12-18T22:38:04&#43;08:00</updated>
+    <updated>2021-12-21T15:37:56&#43;08:00</updated>
     <id>https://blackstar.pro/</id>
     <link rel="alternate" type="text/html" href="https://blackstar.pro/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blackstar.pro/atom.xml" />
@@ -17,19 +17,37 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.89.4">Hugo</generator>
         <entry>
-            <title type="text">一道有趣的组合数学题</title>
+            <title type="text">一道有趣的数学证明题</title>
             <link rel="alternate" type="text/html" href="https://blackstar.pro/posts/%E4%B8%80%E9%81%93%E6%9C%89%E8%B6%A3%E7%9A%84%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E9%A2%98/" />
             <id>https://blackstar.pro/posts/%E4%B8%80%E9%81%93%E6%9C%89%E8%B6%A3%E7%9A%84%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E9%A2%98/</id>
-            <updated>2021-12-15T19:35:37&#43;08:00</updated>
+            <updated>2021-12-21T15:37:20&#43;08:00</updated>
             <published>2021-12-12T21:41:38&#43;08:00</published>
             <author>
                     <name>reuixiy</name>
                     <uri>https://io-oi.me/</uri>
                     <email>reuixiy@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"></summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">题目: 如何证明$\frac{(n^2)!}{(n!)^{n+1}}$是整数？ 方法一：</summary>
             
-                <content type="html"></content>
+                <content type="html">&lt;h3 id=&#34;题目-如何证明fracn2nn1是整数&#34;&gt;题目: 如何证明$\frac{(n^2)!}{(n!)^{n+1}}$是整数？&lt;/h3&gt;
+&lt;h3 id=&#34;方法一直接证明&#34;&gt;方法一：直接证明&lt;/h3&gt;
+&lt;p&gt;$$
+\frac{(n^2)!}{(n!)^{n+1}}=\frac{\prod_{i=1}^n{\frac{\prod_{j=0}^{n-1}(ni-j)}{n!}}}{n!}=\frac{\prod_{i=1}^n{ni\frac{\prod_{j=1}^{n-1}(ni-j)}{n!}}}{n!}=\frac{\prod_{i=1}^n{i\frac{\prod_{j=1}^{n-1}(ni-j)}{(n-1)!}}}{n!}=\prod_{i=1}^n(\frac{\prod_{j=1}^{n-1}(ni-j)}{(n-1)!})
+$$&lt;/p&gt;
+&lt;p&gt;上式最后一项中，连乘积的每一项，分子都是$n-1$个连续自然数的乘积，所以只需证明对于任意n个连续自然数之积，都可以被$n!$整除即可。&lt;/p&gt;
+&lt;h3 id=&#34;方法二组合数学&#34;&gt;方法二：组合数学&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有 $n^2$ 个人，分成 $n$ 组，每组 $n$ 人，请问一共有多少种分法？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;先把这 $n^2$ 个人排成 $n*n$ 的矩阵，共有 $(n^2)!$ 种排法。&lt;/p&gt;
+&lt;p&gt;假如每一列的人算组成一队，共分成 $n$ 队，那么：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在每一队中，这 $n$ 个人的顺序都是无所谓的，所以算组合数时在每一队中都需要除以 $n!$&lt;/li&gt;
+&lt;li&gt;对于这 $n$ 队之间来说，两两的顺序也是无所谓的，所以算组合数时需要再除以$n!$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;组队的总方案数是：$\frac{(n^2)!}{(n!)^{n+1}}$&lt;/p&gt;
+&lt;h4 id=&#34;显然这个数必须是整数&#34;&gt;显然，这个数必须是整数&lt;/h4&gt;
+</content>
             
             
             
