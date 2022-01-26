@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
     <title type="text">Sirius的空间</title>
     <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2021-12-21T15:37:56&#43;08:00</updated>
+    <updated>2022-01-26T21:05:40&#43;08:00</updated>
     <id>https://blackstar.pro/</id>
     <link rel="alternate" type="text/html" href="https://blackstar.pro/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blackstar.pro/atom.xml" />
@@ -15,7 +15,7 @@
                 <email>reuixiy@gmail.com</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    <generator uri="https://gohugo.io/" version="0.89.4">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.91.2">Hugo</generator>
         <entry>
             <title type="text">一道有趣的数学证明题</title>
             <link rel="alternate" type="text/html" href="https://blackstar.pro/posts/%E4%B8%80%E9%81%93%E6%9C%89%E8%B6%A3%E7%9A%84%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%E9%A2%98/" />

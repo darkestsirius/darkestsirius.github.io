@@ -10,7 +10,7 @@
         <title>Sirius的空间</title>
         <link>https://blackstar.pro/</link>
         <description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
-        <generator>Hugo 0.89.4 https://gohugo.io/</generator>
+        <generator>Hugo 0.91.2 https://gohugo.io/</generator>
         
             <language>en-us</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 21 Dec 2021 15:37:56 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 26 Jan 2022 21:05:40 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blackstar.pro/rss.xml" />
         
